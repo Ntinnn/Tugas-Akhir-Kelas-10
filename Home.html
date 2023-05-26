@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <link rel="shourtcut icon" type="x-icon" href="./asset/brilling.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brilling</title>
+</head>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  body {
+    position: relative;
+    background-image: url(/asset/Background\ kuning.jpg);
+    background-repeat: no-repeat;
+    height: auto;
+    background-size: cover;
+  }
+
+  /* Navbar */
+  nav {
+    background-color: #fff3b5bf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 50px;
+    box-shadow: 10px 10px 10px
+    rgba(128,128,128,0.548);
+    color: rgb(0, 0, 0);
+  }
+
+  nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  li {
+    width: 70px;
+  }
+
+  li a {
+    font-size: 1,1rem;
+    cursor: pointer;
+    padding: 20px 15px;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+  }
+
+  li a:hover{
+    color: #f1c40f;
+    border-bottom: 4px #f1c40f solid;
+    transition: 0.5s;
+  }
+
+  .hide{
+    top: 70px;
+  }
+
+  /* Menu */
+
+  .menu {
+    background-color: #fff6a5d4;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+  }
+
+  .menu h2,
+  .products h2,
+  .contact h2 {
+    font-size: 2.6rem;
+    background-color: #F0E161;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    margin: 0 30px;
+    margin-top: 50px;
+    width: 90px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    font-size: 17px;
+    font-family: "roboto",sans-serif;
+    position: absolute;
+    position: relative;
+  }
+
+  .menu h2{
+    margin: auto;
+    width: 200px;
+  }
+
+
+  .menu-card{
+    background-color: #F0E161;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+  }
+
+  .menu p,
+  .products p,
+  .contact p {
+    padding-left: 40px;
+    font-size: 1.5;
+    margin-top: 10px;
+  }
+        
+  /* posisi background + gambar */
+  .menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+        
+  /* besar border */
+  .menu .row .menu-card {
+    text-align: center;
+    margin: 10px;
+  }
+        
+  /* buat besarnya gambar */
+  .menu .row .menu-card img {
+    border-radius: 30px;
+    padding: 20px;
+  }
+
+  /* jarak tulisan antara gambar */
+  .menu .row .menu-card .menu-card-title {
+    margin: 1rem auto 0.5rem;
+  }
+
+  .row {
+    max-height: auto;
+    display: flex;
+    overflow: auto;
+  }
+
+  .row::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .row .menu-card {
+    min-width: 110px;
+    height: 200px;
+    line-height: 10px;
+    text-align: center;
+    margin-right: 2px;
+  }
+
+  .row .menu-card:hover{
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 10s;
+    scroll-behavior: smooth;
+  }
+
+  h4{
+    background-color: #F0E161;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    padding: 10px;
+    width: 200px;
+  }
+
+  .row a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .footer {
+    background-color: #fff3b5;
+    bottom: 0;
+    transform: translateY(10px);
+  }
+
+  p {
+    padding: 10px;
+  }
+
+  .grub{
+    width: 10px;
+    padding: 10px;
+  }
+
+  .BCA {
+    width: 80px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    border-radius: 5px;
+  }
+
+  .Indomaret {
+    height: 60px;
+    width: 80px;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+  }
+
+  .Visa {
+    height: 50px;
+    width: 80px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+  }
+
+  .Mandiri {
+    height: 54px;
+    width: 80px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    margin-left: 90px;
+    transform: translateY(-191px);
+  }
+
+  .Bni {
+    height: 54px;
+    width: 80px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    margin-left: 180px;
+    transform: translateY(-254px);
+  }
+
+  .Cimb {
+    height: 54px;
+    width: 80px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    margin-left: 90px;
+    transform: translateY(-251px);
+  }
+
+  .Alfa {
+    height: 54px;
+    width: 80px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    margin-left: 180px;
+    transform: translateY(-314px);
+  }
+
+  h5{
+    color: #818181a7;
+    padding: 5px;
+    font-size: medium;
+    transform: translateY(-20px);
+  }
+</style>
+
+<body>
+
+  <!-- Navbar / atas -->
+  <nav class="nav-container">
+    <h1 id="logo">Brilling</h1>
+
+    <ul id="nav-links">
+      <li><a href="#" class="links">Home</a></li>
+      <li><a href="Notifikasi.html" class="links">Notifikasi</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu / isinya -->
+<section class="menu">
+  <h2><span> Terbaru </span></h2>
+  <div class="row">
+    <a href="Kacamata.html">
+    <div class="menu-card">
+      <img src="/asset/kacamata.jpg" alt="Kacamata" class="menu-card-img" width="150px" height="144px">
+    <h3 class="menu-card-title">Kacamata</h3>
+    </div>
+  </a>
+
+  <a href="Celana.html">
+  <div class="menu-card">
+    <img src="/asset/Celana.jpg" alt="Celana" class="menu-card-img" width="150px" height="144px">
+    <h3 class="menu-card-title"> Celana</h3>
+  </div>
+</a>
+
+  <a href="Sepatu.html">
+  <div class="menu-card">
+    <img src="/asset/Sepatu.jpg" alt="Sepatu" class="menu-card-img" width="150px" height="144px">
+    <h3 class="menu-card-title"> Sepatu</h3>
+  </div>
+</a>
+
+  <a href="Handphone.html">
+  <div class="menu-card">
+    <img src="/asset/hp.jpg" alt="Handphone" class="menu-card-img" width="150px" height="144px">
+    <h3 class="menu-card-title">Handphone</h3>
+  </div>
+</a>
+
+  <a href="Masker.html"> 
+  <div class="menu-card">
+    <img src="/asset/masker.jpeg" alt="Masker" class="menu-card-img" width="150px" height="144px">
+    <h3 class="menu-card-title">Masker</h3>
+  </div>
+</a>
+
+  <a href="Usb.html"> 
+  <div class="menu-card">
+    <img src="/asset/usb.jpeg" alt="Usb" class="menu-card-img" width="150px" height="144px">
+    <h3 class="menu-card-title">Usb</h3>
+  </div>
+</a>
+
+<a href="Jam_Tangan.html">
+  <div class="menu-card">
+    <img src="/asset/Jam Tangan.jpg" alt="Jam Tangan" class="menu-card-img" width="150px" height="144px">
+    <h3 class="menu-card-title"> Jam Tangan</h3>
+  </div>
+</a>
+
+<a href="Sabun.html">
+  <div class="menu-card">
+    <img src="/asset/sabun.jpg" alt="Sabun" class="menu-card-img" width="150px" height="144px">
+    <h3 class="menu-card-title"> Sabun</h3>
+  </div>
+</a>
+</div>
+  </section>
+
+  <!-- Rekomendasi / isinya -->
+  <section class="menu">
+    <h4><span> Rekomendasi </span></h4>
+    <div class="row">
+
+      <a href="Eye_Liner.html">
+      <div class="menu-card">
+        <img src="/asset/eye liner.jpg" alt="Eye Liner" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Eye Liner</h3>
+      </div>
+    </a>
+  
+    <a href="Bedak.html">
+    <div class="menu-card">
+      <img src="/asset//Bedak_My_Baby.jpg" alt="Bedak" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Bedak</h3>
+    </div>
+  </a>
+  
+  <a href="Lipstik.html">
+    <div class="menu-card">
+      <img src="/asset/Lipstik.jpeg" alt="Lipstik" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Lipstik</h3>
+    </div>
+  </a>
+
+  <a href="Basreng.html">
+    <div class="menu-card">
+      <img src="/asset/basreng.png" alt="Basreng" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Basreng</h3>
+    </div>
+  </a>
+  
+  <a href="Tape.html">
+    <div class="menu-card">
+      <img src="/asset/tape.jpeg" alt="tape" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Tape</h3>
+    </div>
+  </a>
+  
+  <a href="Rambut_Wig.html">
+    <div class="menu-card">
+      <img src="/asset/wig.jpeg" alt="Wig" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Rambut Wig</h3>
+    </div>
+  </a>
+  
+  <a href="Laptop.html">
+    <div class="menu-card">
+      <img src="/asset/laptop.jpg" alt="Laptop" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Laptop</h3>
+    </div>
+  </a>
+  
+  <a href="Dasi.html">
+    <div class="menu-card">
+      <img src="/asset/dasi.jpg" alt="Dasi" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Dasi</h3>
+    </div>
+  </a>
+
+  <a href="Botol_Air.html">
+    <div class="menu-card">
+      <img src="/asset/aqua.jpeg" alt="Botol Air" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Botol Air</h3>
+    </div>
+  </a>
+
+  <a href="Meja.html">
+    <div class="menu-card">
+      <img src="/asset/meja.jpeg" alt="Meja" class="menu-card-img" width="150px" height="144px">
+      <h3 class="menu-card-title">Meja</h3>
+    </div>
+  </a>
+  </div>
+    </section>
+
+    <!-- Footer/bagian bawah -->
+    <footer class="footer">
+      <div class="grub">
+      <p>Pembayaran</p>
+      <img src="/asset/bca.jpeg" class="BCA" alt="Bca">
+
+      <img src="/asset/indomaret.png" class="Indomaret" alt="Indomaret">
+
+      <img src="/asset/Visa.jpg" class="Visa" alt="Visa">
+
+      <img src="/asset/mandiri.jpg" class="Mandiri" alt="Mandiri">
+
+      <img src="/asset/bni.jpeg" class="Bni" alt="BNI">
+
+      <img src="/asset/cimb niaga.jpeg" class="Cimb" alt="Cimb Niaga">
+
+      <img src="/asset/ALFAMART_LOGO_BARU.png" class="Alfa" alt="Alfamart">
+    </div>
+
+    <h5>© Brilling 2023. Hak Cipta Dilindungi</h5>
+    <h5>No WhatsApp +62 896-1687-9962</h5>
+    <h5>Disetujui oleh Pemerintah Indonesia</h5>
+    </footer>
+</body>
+</html>

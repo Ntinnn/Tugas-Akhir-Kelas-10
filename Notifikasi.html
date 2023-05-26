@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link rel="shourtcut icon" type="x-icon" href="./asset/brilling.png">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifikasi</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        text-decoration: none;
+        text-align: center;
+      }
+    
+      body {
+        position: relative;
+        height: 100vh;
+        background-image: url(/asset/Background\ kuning.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+      }
+    
+      /* Navbar */
+      nav {
+        background-color: #fff3b5bf;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding: 15px 50px;
+        box-shadow: 10px 10px 10px
+        rgba(128,128,128,0.548);
+        color: rgb(0, 0, 0);
+      }
+    
+      nav ul{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    
+      li {
+        width: 70px;
+      }
+    
+      li a {
+        font-size: 1,1rem;
+        cursor: pointer;
+        padding: 20px 15px;
+        transition: 0.5s;
+        color: rgb(0, 0, 0);
+      }
+    
+      li a:hover{
+        color: #f1c40f;
+        border-bottom: 4px #f1c40f solid;
+        transition: 0.5s;
+      }
+    
+      .hide{
+        top: 70px;
+      }
+    
+      img {
+        padding: 10px;
+        padding-top: 50px;
+        margin: auto;
+        width: 600px;
+        border-radius: 30px;
+      }
+
+    .luar {
+        background-color: #fff3b5bf;
+        width: 900px;
+        margin: auto;
+        margin-top: 20px;
+        height: 650px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px
+        rgba(128,128,128,0.548);
+      }
+
+      @media (max-width:500px) {
+        .luar {transform: translateX(-100px);
+        width: 300px;
+        height: 300px;
+        margin: 200px;
+        transform: translateY(-90px) translateX(-90px);
+      }
+      
+      img{
+        width: 300px;
+        height: 300px;
+        transform: translateY(-20px);
+      }
+    }
+    </style>
+    
+    <body>
+          <!-- Navbar / atas -->
+      <nav class="nav-container">
+        <h1 id="logo">Brilling</h1>
+    
+        <ul id="nav-links">
+          <li><a href="Home.html" class="links">Home</a></li>
+          <li><a href="" class="links">Notifikasi</a></li>
+        </ul>
+      </nav>
+    
+      <div class="luar">
+        <div class="dalemnya">
+            <img src="/asset/Untuk Notif.png" alt="Notif">
+        </div>
+      </div>
+    </body>
+    </html>

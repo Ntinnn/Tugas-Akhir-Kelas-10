@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link rel="shourtcut icon" type="x-icon" href="./asset/brilling.png">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kacamata</title>
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  body {
+    position: relative;
+    height: max-content;
+    background-image: url(/asset/Background\ kuning.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+  }
+
+  /* Navbar */
+  nav {
+    background-color: #fff3b5bf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 50px;
+    box-shadow: 10px 10px 10px
+    rgba(128,128,128,0.548);
+    color: rgb(0, 0, 0);
+  }
+
+  nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  li {
+    width: 70px;
+  }
+
+  li a {
+    font-size: 1,1rem;
+    cursor: pointer;
+    padding: 20px 15px;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+  }
+
+  li a:hover{
+    color: #f1c40f;
+    border-bottom: 4px #f1c40f solid;
+    transition: 0.5s;
+  }
+
+  .hide{
+    top: 70px;
+  }
+  /* . . . . . . */
+
+  .pembelian {
+    background-color: #fff3b5bf;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+  }
+
+  .background {
+    background-color: #F0E161;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 40px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+  }
+  
+  .Kacamata {
+    width: 560px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    transform: translateX(-300px) translateY(100px);
+  }
+  
+  .Isinya {
+    background-color: #fff3b5bf;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    margin: 40px;
+    padding: 20px;
+    box-shadow:  0px 5px 5px
+    rgba(128,128,128,0.363);
+    transform: translateX(630px) translateY(-400px);
+  }
+
+  .Isinya h2 {
+    font-size: 30px;
+    transform: translateX(140px);
+  }
+
+
+  h2, h3 {
+    padding: 10px;
+    text-align: justify;
+    font-size: 20px;
+  }
+
+  h4{
+    font-size: 20px;
+    transform: translateX(-10px) translateY(5px);
+    font-size: 30px;
+  }
+
+.Beli {
+    background-color: #fff3b5bf;
+    border-radius: 5px;
+    padding: 40px;
+    margin: 10px;
+    box-shadow: 0px 5px 5px
+    rgba(128,128,128,0.363);
+    font-size: 50px;
+    transform: translateY(-90px);
+}
+
+a{
+  color: black;
+}
+
+
+.angka {
+  background-color: #F0E161;
+  border-radius: 5px;
+  padding: 10px;
+  height: 80px;
+  margin: 10px;
+  box-shadow: 0px 5px 5px
+  rgba(128,128,128,0.363);
+}
+
+.pembelian .angka input {
+  height: 40px;
+  background: transparent;
+  width: 300px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  transform: translateY(10px);
+}
+
+
+
+@media (max-width: 820px) {
+  .Kacamata{
+    width: 250px;
+    height: 250px;
+    transform: translateY(150px) translateX(-190px);
+  }
+
+  .Isinya{
+    transform: translateX(270px) translateY(-200px);
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+  }
+
+  .Isinya h2{
+    transform: translateX(50px);
+  }
+
+  .Beli{
+    transform: translateY(-50px);
+  }
+
+  .angka{
+    transform: translateY(5px);
+  }
+}
+</style>
+
+<body>
+      <!-- Navbar / atas -->
+  <nav class="nav-container">
+    <h1 id="logo">Brilling</h1>
+
+    <ul id="nav-links">
+      <li><a href="Home.html" class="links">Home</a></li>
+      <li><a href="Notifikasi.html" class="links">Notifikasi</a></li>
+    </ul>
+  </nav>
+
+  <!-- isi -->
+  <div class="pembelian">
+    <div class="background">
+      <img src="/asset/kacamata.jpg" alt="Kacamata" class="Kacamata">
+    
+    <div class=" Isinya">
+      <h2>Kacamata</h2>
+      <h2>Rp100.000</h2>
+      <h3>Tersedia : 20</h3>
+      <h3>Pengiriman dari</h3>
+      <h3><strong>Kota Jakarta Pusat</strong></h3>
+      <h4>Kuantitas</h4>
+
+      <div class="angka">
+        <input type="number" name="" required="">
+      </div>
+    </div>
+
+    <a href="Pembelian_Kacamata.html">
+    <div class="Beli">
+      <p><strong>Beli Sekarang</strong></p>
+    </div>
+  </a>
+    </div>
+  </div>
+</body>
+</html>
